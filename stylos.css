@@ -39,6 +39,7 @@ img:hover{
 .integrantes{
     display: flex;
     flex-direction: row;
+    flex-wrap:wrap;
     justify-content: space-around;
 }
 .integrantes p{
