@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="inicio.css">
-    <link rel="shortcut icon" href="img/logo.ico"type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <title>Proyecto Final</title>
 </head>
+
 <body>
     <!--Este es el contennedor de todo el contenido-->
     <div class="contenedor">
@@ -18,15 +20,18 @@
 
             <!--Este codigo es del encabezado principal-->
             <div class="encabezado">
-               <header>
-                  <div class="logo"><span>EL</span>POLONORTE</div>
-               </header>
+                <header>
+                    <div class="logo"><span>MOCHILAS <br></span>AYACUCHO</div>
+                </header>
                 <nav>
-                   <a href="#inicio">inicio</a>
-                   <a href="#mochilaComprar">Comprar</a>
-                   <a href="#sobreNosotros">Nosotros</a>
-                   <a href="#contacto">Contacto</a>
+                    <a href="#inicio">inicio</a>
+                    <a href="#mochilaComprar">Comprar</a>
+                    <a href="#sobreNosotros">Nosotros</a>
+                    <a href="#contacto">Contacto</a>
                 </nav>
+                <div class="carrito-btn">
+                    🛒 <span style="color: white;" id="carrito-contador">0</span >
+                </div>
             </div>
 
             <!--TITULO DE LA PAGINA DE INICIO-->
@@ -36,55 +41,72 @@
             </div>
         </div>
 
-        <!--Aqui va los articulos de compra-->
+        <!--Aqui va los articulos de compra-->    
+        <!--Mas productos de mochilas-->
         <div class="nuevosArticulos">
             <div class="nombre">
-                <p>Recién llegados <br><a href="#mochilaComprar">COMPRAR AHORA</a></p>
+                <p>Recién llegados <br><a href="#mochilaComprar">VER PRODUCTOS</a></p>
             </div>
             <div class="image">
                 <img src="img/articulo1.jpg" alt="articulo" title="Bolso" id="imagen">
             </div>
         </div>
-
+        
         <!--Mas productos de mochilas-->
         <div class="tituloMochila" id="mochilaComprar">
             <p>Mochilas</p>
         </div>
         <div class="tiendaMochilas">
             <div class="mochila1">
-                <img src="img/mochila1.jpg" alt="mochila" title="En oferta">
+                <img src="img/mochila1.jpg" alt="mochila" title="Mochila Escolar">
+                <h3>Mochila Escolar</h3>
                 <p>Precio: $30</p>
-                <a href="#mochilaComprar">Comprar Ahora</a>
+                <button class="comprar-btn" data-id="1" data-nombre="Mochila Escolar" data-precio="30">Agregar al carrito</button>
             </div>
-
+        
             <div class="mochila2">
-                <img src="img/mochila1.jpg" alt="mochila" title="En oferta">
+                <img src="img/mochila1.jpg" alt="mochila" title="Mochila Escolar">
+                <h3>Mochila Escolar</h3>
                 <p>Precio: $19</p>
-                <a href="#mochilaComprar">Comprar Ahora</a>
+                <button class="comprar-btn" data-id="2" data-nombre="Mochila Escolar" data-precio="19">Agregar al carrito</button>
             </div>
-
+        
             <div class="mochila3">
-                <img src="img/mochila1.jpg" alt="mochila" title="En oferta">
+                <img src="img/mochila1.jpg" alt="mochila" title="Mochila Escolar">
+                <h3>Mochila Escolar</h3>
                 <p>Precio: $40</p>
-                <a href="#mochilaComprar">Comprar Ahora</a>
+                <button class="comprar-btn" data-id="3" data-nombre="Mochila Escolar" data-precio="40">Agregar al carrito</button>
             </div>
-
+        
             <div class="mochila4">
-                <img src="img/mochila2.jpg" alt="mochila" title="En oferta">
+                <img src="img/mochila2.jpg" alt="mochila" title="Mochila Militar">
+                <h3>Mochila Militar</h3>
                 <p>Precio: $35</p>
-                <a href="#mochilaComprar">Comprar Ahora</a>
+                <button class="comprar-btn" data-id="4" data-nombre="Mochila Militar" data-precio="35">Agregar al carrito</button>
             </div>
-
+        
             <div class="mochila5">
-                <img src="img/mochila2.jpg" alt="mochila" title="En oferta">
+                <img src="img/mochila2.jpg" alt="mochila" title="Mochila Militar">
+                <h3>Mochila Militar</h3>
                 <p>Precio: $25</p>
-                <a href="#mochilaComprar">Comprar Ahora</a>
+                <button class="comprar-btn" data-id="5" data-nombre="Mochila Militar" data-precio="25">Agregar al carrito</button>
             </div>
-
+        
             <div class="mochila6">
-                <img src="img/mochila2.jpg" alt="mochila" title="En oferta">
+                <img src="img/mochila2.jpg" alt="mochila" title="Mochila Militar">
+                <h3>Mochila Militar</h3>
                 <p>Precio: $40</p>
-                <a href="#mochilaComprar">Comprar Ahora</a>
+                <button class="comprar-btn" data-id="6" data-nombre="Mochila Militar" data-precio="40">Agregar al carrito</button>
+            </div>
+        </div>
+            <div id="carrito-modal" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar">&times;</span>
+                    <h2>Tu Carrito</h2>
+                    <div id="carrito-items"></div>
+                    <p>Total: $<span id="carrito-total">0</span></p>
+                    <button id="comprar-carrito">Comprar</button>
+                </div>
             </div>
         </div>
 
@@ -92,11 +114,14 @@
             <div class="nosotros">
                 <h2>Sobre Nosotros</h2>
                 <br>
-                <p>Lorem ipsum dolor sit amet consectetur uo similique ad maxime eius quod fugiat. Tempora 
-                autemnumquam corporis assumenda praesentium amet eum non distinctio similique atque.</p>
+                <p>En Mochilas Ayacucho, ofrecemos mochilas de alta calidad inspiradas en
+                    la rica cultura de Ayacucho. Combinamos funcionalidad, durabilidad y
+                    estilo para acompañarte en todas tus aventuras. Descubre la mochila
+                    perfecta para tu día a día, trabajo, estudio o escapadas al aire libre.
+                    ¡Explora con nosotros!</p>
             </div>
             <div class="nosotrosLogo">
-                <p><span>EL</span>POLONORTE </p>
+                <p><span>MOCHILAS</span> AYACUCHO </p>
             </div>
         </div>
 
@@ -105,21 +130,24 @@
         <div class="contacto" id="contacto">
             <div class="contactoNotas">
                 <h2>Contacto</h2>
-                <p>Lorem ipsum dolor elit reiciendis sapiente molestias quo, maiores 
-                dicta, illum inventore possimus minima mollitia error rerum 
-                ut harum sit tempora maxime.re</p>
+                <p>¿Tienes alguna pregunta o necesitas asistencia? ¡Estamos aquí para ayudarte!</p>
                 <br>
-                <p>Info@POLONORTE.COM</p>
-                <p>Tel.779-233-412</p>
+                <p>Email: contacto@mochilasayacucho.com</p>
+                <p>Teléfono: +51 123 456 789</p>
+                <p>Dirección: Calle Principal 123, Ayacucho, Perú</p>
                 <br>
                 <a href="formulario.html">Registrarme</a>
             </div>
         </div>
+        
 
         <!--Pie de pagina-->
         <footer>
-            <h2>Todos los derechos reservados ELPOLONORTE</h2>
+            <h2>Todos los derechos reservados MOCHILAS AYACUCHO</h2>
         </footer>
+
+        <script src="carrito.js"></script>
     </div>
 </body>
+
 </html>
