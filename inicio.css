@@ -330,6 +330,10 @@ footer h2 {
     border-radius: 5px;
 }
 
+.tiendaMochilas h3{
+    color: white;
+}
+
 .carrito-btn {
     cursor: pointer;
     font-size: 1.5rem;
